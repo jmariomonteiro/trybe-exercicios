@@ -37,10 +37,78 @@
 //       console.log(index, car[index])
 //   };
 
-function greetingsMessage(name) {
-    console.log("Boas vindas, " + name);
-  }
+//praticando 
+//1 e 2
+
+// let info = {
+//     personagem: 'Margarida',
+//     origem: 'Pato Donald',
+//     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+//     recorrente: 'Sim'
+//   };
+
+//   console.log("Boas vindas, " + info.personagem)
+
+//3 e 4
+
+// let info = {
+//     personagem: 'Margarida',
+//     origem: 'Pato Donald',
+//     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+//     recorrente: 'Sim'
+//   };
+
+// //   for (let position in info) {
+// //     console.log(position);
+// //   };
+
+// for(let properties in info){
+//     console.log(info[properties]);
+//   }
+
+//5 
+// let info = {
+//         personagem: 'Margarida',
+//         origem: 'Pato Donald',
+//         nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+//         recorrente: 'Sim'
+//       };
   
+//       let info2 = {
+//         personagem: 'Tio Patinhas',
+//         origem: 'Pato Christmas on Bear Mountain',
+//         nota: 'O último MacPatinhas',
+//         recorrente: 'Sim'
+//       };
+
+//       for (let properties in info) {
+//          console.log(info[properties] + ' e ' + info2[properties]);
+//         }
+
+//6 e 7
+// let leitor = {
+//     nome: 'Julia',
+//     sobrenome: 'Pessoa',
+//     idade: 21,
+//     livrosFavoritos: [
+//       {
+//         titulo: 'O Pior Dia de Todos',
+//         autor: 'Daniela Kopsch',
+//         editora: 'Tordesilhas',
+//       },
+//     ],
+//   };
+
+//   console.log('O livro favorito de ' + leitor.nome + ' ' + leitor.sobrenome + ' se chama ' + leitor.livrosFavoritos[0].titulo + '.');
   
+//   leitor.livrosFavoritos.push (
+//     {
+//         titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//         autor: 'JK Rowling',
+//         editora: 'Rocco',
+//     },
+//   );
+
+//   console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos!')
   
   
