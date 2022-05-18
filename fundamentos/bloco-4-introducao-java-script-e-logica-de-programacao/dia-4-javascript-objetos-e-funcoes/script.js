@@ -111,4 +111,59 @@
 
 //   console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos!')
   
+//exercicios funções:
+
+// function verificaPalindrome(word){
+//     for(index in word){
+//       if(word[index] != word[(word.length - 1) - index]){
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+//   function verificaPalindrome(string) {
+//     let reverse = string.split('').reverse().join('');
+//     if (reverse === string) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+
+//   console.log(verificaPalindrome('arara'));
+
+// function indiceMaior(numeros) {
+//     let indiceMaior = 0;
+//     for (let indice in numeros){
+//         if (numeros[indiceMaior] < numeros[indice]) {
+//             indiceMaior = indice;
+//           }
+//         }
+//         return indiceMaior;
+//       }
+    
+//       console.log(indiceMaior([1, 3, 5, 12, 5]));
+
+// function indiceMenor (numeros) {
+//     let indiceMenor = 0;
+//     for (let indice in numeros) {
+//         if (numeros[indiceMenor] > numeros[indice]) {
+//         }
+//     }
+//     return indiceMenor;
+// } 
+
+// console.log(indiceMenor([1, 4, 5, 6, 2]))
+
+
+function maiorPalavra(palavras) {
+    let maiorPalavra = palavras[0];
+    for (let indice in palavras) {
+      if (maiorPalavra.length < palavras[indice].length) {
+        maiorPalavra = palavras[indice];
+      }
+    }
+    return maiorPalavra;
+  }
   
+  console.log(maiorPalavra(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'])); //Fernanda
