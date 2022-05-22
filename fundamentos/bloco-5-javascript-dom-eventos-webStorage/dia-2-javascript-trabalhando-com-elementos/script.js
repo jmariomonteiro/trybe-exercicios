@@ -47,6 +47,52 @@ document.body.appendChild(contentMain);
          list.appendChild(elementLi)
      }
 
+     //Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+     for (let index = 1; index <= 3; index +=1) {
+       let elementoTags = document.createElement('h3');
+       elementoTags.innerHTML = 'show ' + index;
+       contentMain.appendChild(elementoTags);
+     }
+
+     //parte 2
+
+    //  //Adicione a classe title na tag h1 criada;
+     let title = document.querySelector('h1');
+     title.className = 'title';
+
+    //  //Adicione a classe description nas 3 tags h3 criadas;
+     let elementTags = document.getElementsByTagName('h3');
+     for (index = 0; index < 3; index +=1) {
+       elementTags[index].className = 'description';
+     }
+
+     //// 3. Remova a `section` criado no passo 5 (aquele que possui a classe `left-content`). Utilize a função `.removeChild()`;
+     let removeSection = document.getElementsByClassName('left-content')[0];
+     contentMain.removeChild(removeSection);
+
+     //4. Centralize a `section` criado no passo 6 (aquele que possui a classe `right-content`).
+     // Dica: para centralizar, basta configurar o `margin-right: auto` da `section`;
+
+     let cetralizeSection = document.getElementsByClassName('right-content')[0];
+     cetralizeSection.style.marginRight = 'auto';
+
+     //5. Troque a cor de fundo do elemento pai da `section` criada no passo 3 
+    // (aquela que possui a classe `center-content`) para a cor verde;
+
+    let corFundo = document.getElementsByClassName('center-content')[0];
+    corFundo.parentElement.style.backgroundColor = "green";
+    
+    // 6.Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+    ul.lastChild.remove();
+    ul.lastChild.remove();
+
+
+
+
+
+
+
+
 
 
 
