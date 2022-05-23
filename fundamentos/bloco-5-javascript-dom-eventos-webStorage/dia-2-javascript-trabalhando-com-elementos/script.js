@@ -83,8 +83,8 @@ document.body.appendChild(contentMain);
     corFundo.parentElement.style.backgroundColor = "green";
     
     // 6.Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-    ul.lastChild.remove();
-    ul.lastChild.remove();
+    list.lastChild.remove();
+    list.lastChild.remove();
 
 
 
