@@ -60,5 +60,63 @@ function createDaysOfTheWeek() {
 
  //exercicio 3
  function colorBotao () {
-     let
+    let corBotao = document.querySelector('#btn-holiday');
+    let holidays = document.querySelectorAll('.holiday');
+    let bgCor = 'rgb(238,238,238)';
+    let novaCor = 'red';
+    
+    corBotao.addEventListener('click', function() {
+        for (index = 0; index < holidays.length; index +=1) {
+            if (holidays[index].style.backgroundColor === novaCor) {
+                holidays[index].style.backgroundColor = bgCor; 
+            } else {
+                holidays[index].style.backgroundColor = novaCor;
+            }
+        }
+    })
  }
+
+ colorBotao();
+
+ //exercicio 4
+//  Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente 
+// um botão com o nome "Sexta-feira".
+// Adicione a este botão o ID "btn-friday".
+// Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
+function buttonSexta(buttonName) {
+    let buttonContainer = document.querySelector('.buttons-container');
+    let button2 = document.createElement('button');
+    let button2ID = 'btn-friday';
+
+    button2.innerHTML = buttonName;
+    button2.id = button2ID;
+    buttonContainer.appendChild(button2);
+    }
+
+    buttonSexta('Sexta-feira');
+
+// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click"
+// que modifica o texto exibido nos dias que são Sexta-feira.
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele 
+//retorna à configuração inicial exibindo os dias.
+
+function button(friday) {
+    let buttonSexta = document.querySelector('#btn-friday');
+    let fridays = document.getElementsByClassName('friday');
+    let novoTextoFriday = 'Sextou';
+
+    buttonSexta.addEventListener('click', function() {
+        for (let index = 0; index < fridays.length; index +=1) {
+            if (fridays[index].innerHTML !== novoTextoFriday) {
+                fridays[index].innerHTML = novoTextoFriday
+            } else {
+                fridays[index].innerHTML = friday[index];
+            }
+        }
+
+    })
+}
+
+let dezFridays = [4, 11, 18, 25];
+button();
