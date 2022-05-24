@@ -96,7 +96,7 @@ function buttonSexta(buttonName) {
 
     buttonSexta('Sexta-feira');
 
-// Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click"
+// 5  Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click"
 // que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele 
 //retorna à configuração inicial exibindo os dias.
@@ -120,3 +120,46 @@ function button(friday) {
 
 let dezFridays = [4, 11, 18, 25];
 button();
+
+// exercicio 6
+// Implemente duas funções que criem um efeito de "zoom".
+//  Ao passar o ponteiro do mouse em um dia do mês no calendário, 
+//  o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, 
+//  o texto deve retornar ao tamanho original.
+
+function mouseZoom() {
+    let days = document.querySelector('#days');
+
+    days.addEventListener('mouseover', function(event) {
+        event.target.style.fontSize = '30px';
+        event.target.style.fontWeight = '600';
+    })
+};
+
+function mouseSair() {
+    let days = document.querySelector('#days');
+
+    days.addEventListener('mouseout', function(event) {
+        event.target.style.fontSize = '20px';
+        event.target.style.fontWeight = '200';
+    })
+};
+
+mouseZoom();
+mouseSair();
+
+//exercio 7
+// Implemente uma função que adiciona uma tarefa personalizada ao calendário. 
+// A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") 
+// e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+function todasTarefas (tarefa){
+    let tarefaContainer = document.querySelector('.my-tasks');
+    let tarefaSpan = document.createElement('span');
+
+    tarefaSpan.innerHTML = tarefa;
+    tarefaContainer.appendChild(tarefaSpan);
+}
+
+todasTarefas('Projeto:');
