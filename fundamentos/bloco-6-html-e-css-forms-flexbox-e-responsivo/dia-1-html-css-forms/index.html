@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -24,18 +24,18 @@
         </label>
         <div>
             <input type="radio" name="lugar" id="lugar-1">
-            <label for="lugar-1">São Paulo</label>
+            <label for="lugar-1">Cidade</label>
             <input type="radio" name="lugar" id="lugar-2">
-            <label for="lugar-2">Rio De Janeiro</label>
+            <label for="lugar-2">Campo</label>
             <input type="radio" name="lugar" id="lugar-3">
-            <label for="lugar-3">Pernambuco</label>
+            <label for="lugar-3">Praia</label>
             <input type="radio" name="lugar" id="lugar-4">
-            <label for="lugar-4">Alagoas</label>
+            <label for="lugar-4">Montanhas</label>
         </div>
         <div>
             <label for="pq">Por que você seria uma pessoa escolhida para o TrybeTrip? </label>
             <br>
-            <textarea name="" id="pq" cols="30" rows="10"></textarea>
+            <textarea name="" id="pq" cols="30" rows="10" maxlength="500"></textarea>
         </div>
         <div>
             <label for="data">Data</label>
@@ -48,10 +48,10 @@
             <label for="opcap-2">Concordo que imagens de minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
             <input type="checkbox" name="opcao-2" id="opcao-2">
         </div>
-        <button type="submit">Participar do concurso TrybeTrip</button>
+        <button type="submit" id="submit-btn">Participar do concurso TrybeTrip</button>
+        <button type="button" id="clear-btn">Apagar informações</button>
     </form>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
