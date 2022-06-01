@@ -5,50 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="container text-center">
     <h1>TrybeTrip:</h1>
     <p>Quer ganhar uma viagem? Preencha nosso formulário e boa sorte!</p>
     </header>
     <main>
     <form action="" method="get">
-        <label for="input-name">Nome:
-            <input type="text" name="nome" id="input-name" placeholder="Digite seu nome completo" maxlength="50" minlength="10" required>
-        </label>
-        <br>
-        <label for="input-email">Email:
-            <input type="email" name="email" id="input-email" placeholder="Digite seu email" maxlength="50" minlength="10" required>
-        </label>
-        <div>
-            <input type="radio" name="lugar" id="lugar-1">
-            <label for="lugar-1">Cidade</label>
-            <input type="radio" name="lugar" id="lugar-2">
-            <label for="lugar-2">Campo</label>
-            <input type="radio" name="lugar" id="lugar-3">
-            <label for="lugar-3">Praia</label>
-            <input type="radio" name="lugar" id="lugar-4">
-            <label for="lugar-4">Montanhas</label>
+        <div class="container">
+            <label for="input-name">Nome:</label>
+            <input class="form-control" type="text" name="nome" id="input-name" placeholder="Digite seu nome completo" maxlength="50" minlength="10" required>
         </div>
-        <div>
+        <div class="container">
+            <label for="input-email">Email:</label>
+            <input class="form-control" type="email" name="email" id="input-email" placeholder="Digite seu email" maxlength="50" minlength="10" required>
+        </div>
+        <div class="container">
+            <p class="lead">Qual lugar você prefere ir? Selecione uma opção</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="lugar" id="lugar-1">
+                <label class="form-check-label" for="lugar-1">Cidade</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="lugar" id="lugar-4">
+                <label class="form-check-label" for="lugar-4">Montanhas</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="lugar" id="lugar-3">
+                <label class="form-check-label" for="lugar-3">Praia</label> 
+            </div><div class="form-check">
+                <input class="form-check-input" type="radio" name="lugar" id="lugar-2">
+                <label class="form-check-label" for="lugar-2">Campo</label>
+            </div>           
+        </div>
+        <div class="container">
             <label for="pq">Por que você seria uma pessoa escolhida para o TrybeTrip? </label>
-            <br>
-            <textarea name="" id="pq" cols="30" rows="10" maxlength="500"></textarea>
+            <textarea class="form-control" name="" id="pq" cols="20" rows="5" maxlength="500"></textarea>         
         </div>
-        <div>
-            <label for="data">Data</label>
-            <input type="date" name="periodo" id="data">
+        <div class="container">
+            <label for="data">Data:</label>
+            <input class="form-control" type="date" name="periodo" id="data">
         </div>
-        <div>
-            <label for="opcao-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+        <div class="container">
             <input type="checkbox" name="opcao-1" id="opcao-1">
-            <br>
-            <label for="opcap-2">Concordo que imagens de minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
-            <input type="checkbox" name="opcao-2" id="opcao-2">
+            <label for="opcao-1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            
         </div>
-        <button type="submit" id="submit-btn">Participar do concurso TrybeTrip</button>
-        <button type="button" id="clear-btn">Apagar informações</button>
+        <div class="container"> 
+            <input type="checkbox" name="opcao-2" id="opcao-2">
+            <label for="opcap-2">Concordo que imagens de minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+            
+        </div>
+        <div class="container"> 
+            <button type="submit" class="btn btn-info" id="submit-btn">Participar do concurso TrybeTrip</button>
+    
+            <button type="button" class="btn btn-info" id="clear-btn">Apagar informações</button>
+        </div>
     </form>
     </main>
     <script src="script.js"></script>
