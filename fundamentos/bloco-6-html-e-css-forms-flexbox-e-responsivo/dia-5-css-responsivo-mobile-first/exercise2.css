@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    display: flex;
+}
+p {
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(211, 134, 134);
+        flex-wrap: wrap;
+    }
+    .container {
+        flex-direction: column;
+    }
+    p {
+        padding: 0 5px;
+        line-height: 1.5em;
+      }
+    .linhas {
+        color: antiquewhite;
+        flex-direction: column wrap;
+        align-items: center;        
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+      background-color: rgb(37, 176, 223);
+    }
+  
+    .container {
+      flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+      background-color: rgb(221, 235, 221);
+      justify-content: center;
+      padding-top: 20px;
+    }
+  
+    .container {
+      flex-wrap: nowrap;
+    }
+    header {
+        align-items: center;
+    }
+    .aside-one {
+        padding-top: 15px;
+    }
+    .aside-two {
+        padding-top: 15px;
+    }
+}
