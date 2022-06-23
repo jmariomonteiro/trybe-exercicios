@@ -63,32 +63,52 @@ const books = [
   
   // Adicione o código do exercício aqui:
   //Encontre o nome da primeira pessoa autora do livro nascida no ano de 1947.(use a função find)
-
-  function authorBornIn1947() {
-    return books.find((book) => book.author.birthYear === 1947).author.name;
+ //FAZENDO COMO CAIQUE ENSINOU:
+  const nascida1947 = (array) => {
+      return array.find((elemento) => elemento.author.birthYear === 1947).author.name;
   };
 
-  console.log(authorBornIn1947());
+  console.log(nascida1947(books));
 
-  function smallerName() {
-    let nameBook;
-    // escreva aqui o seu código
+//   function authorBornIn1947() {
+//     return books.find((book) => book.author.birthYear === 1947).author.name;
+//   };
+
+//   console.log(authorBornIn1947());
+
+//   function smallerName() {
+//     let nameBook;
+//     // escreva aqui o seu código
   
-    // Variável nameBook que receberá o valor do menor nome;
-    return nameBook;
-  }
+//     // Variável nameBook que receberá o valor do menor nome;
+//     return nameBook;
+//   }
   // Faça uma função que retorne true, se todas as 
     //pessoas autoras nasceram no século XX, ou false, caso contrário.
 
-  function everyoneWasBornOnSecXX() {
-    // escreva seu código aqui
-    return  books.every((book) => {
-      book.author.birthYear >= 1901 && book.author.birthYear < 2000;
-    })
-  };
+    //FAZENDO DA FORMA QUE CAIQUE ENSINOU
+    // const autoresXX = (array) => {
+    //     return array.every((elemento) =>{
+    //         return elemento.author.birthYear >= 1901 && elemento.author.birthYear < 2000
+    //     });
+    // };
+    // console.log(autoresXX(books));
+
+    const autoresXX = (array) => {
+        return array.some((elemento) => {
+            return elemento.author.birthYear >= 1901 && elemento.author.birthYear < 2000
+        });
+    };
+    console.log(autoresXX(books));
+
+//   function everyoneWasBornOnSecXX() {
+//     // escreva seu código aqui
+//     return  books.every((book) => {
+//       book.author.birthYear >= 1901 && book.author.birthYear < 2000;
+//     })
+//   }; 
   
-  
-  console.log(everyoneWasBornOnSecXX());
+//   console.log(everyoneWasBornOnSecXX());
 
   function someBookWasReleaseOnThe80s() {
     // escreva seu código aqui
